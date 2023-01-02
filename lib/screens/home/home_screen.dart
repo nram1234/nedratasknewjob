@@ -161,7 +161,7 @@ class HomeScreen extends GetView<HomeController> {
                                   ),
                                 ],
                               ),
-                            ),
+                           child: Image.network(logic.categoriesModel!.data![pos].icon!), ),
                             SizedBox(
                               width: 8,
                             ),
@@ -169,12 +169,12 @@ class HomeScreen extends GetView<HomeController> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("${logic.categoriesModel?.data?}",
+                                Text("${logic.categoriesModel?.data?[pos].name}",
                                     style: TextStyle(color: Colors.yellow)),
                                 SizedBox(
                                   height: 4,
                                 ),
-                                Text("linkia it Qa",
+                                Text("",
                                     style: TextStyle(color: Colors.yellow)),
                               ],
                             ),
