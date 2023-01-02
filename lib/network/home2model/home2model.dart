@@ -332,7 +332,7 @@ class Trainings {
   Null? gatheringDate;
   bool? joined;
   User? user;
-  List<Null>? trainingImages;
+  List<String>? trainingImages;
   List<TrainingSponsors>? trainingSponsors;
   List<TrainingParticipants>? trainingParticipants;
 
@@ -404,12 +404,7 @@ class Trainings {
     gatheringDate = json['gathering_date'];
     joined = json['joined'];
     user = json['user'] != null ? new User.fromJson(json['user']) : null;
-    if (json['training_images'] != null) {
-      trainingImages = <Null>[];
-      json['training_images'].forEach((v) {
-        trainingImages!.add(new Null.fromJson(v));
-      });
-    }
+    trainingImages = json['training_images'].cast<String>();
     if (json['training_sponsors'] != null) {
       trainingSponsors = <TrainingSponsors>[];
       json['training_sponsors'].forEach((v) {
@@ -459,10 +454,7 @@ class Trainings {
     if (this.user != null) {
       data['user'] = this.user!.toJson();
     }
-    if (this.trainingImages != null) {
-      data['training_images'] =
-          this.trainingImages!.map((v) => v.toJson()).toList();
-    }
+    data['training_images'] = this.trainingImages;
     if (this.trainingSponsors != null) {
       data['training_sponsors'] =
           this.trainingSponsors!.map((v) => v.toJson()).toList();
