@@ -33,7 +33,7 @@ class ChallengesWidgetItem extends StatelessWidget {
                   Text(time,
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 14,
                           fontWeight: FontWeight.w500)),
                   Text(date, style: TextStyle(color: Colors.white))
                 ]),

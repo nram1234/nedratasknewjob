@@ -10,7 +10,7 @@ class AppInterCepter extends di.Interceptor{
 
   @override
   void onRequest(di.RequestOptions options,di. RequestInterceptorHandler handler) {
-    options.headers[ "authorization"]=  "Bearer 96|oSR2i3QienQAFIBhucG3mUNSMizhBdLdnk0EcKwI";
+    options.headers[ "authorization"]=  "Bearer 5|jGYGJMUv9Fh6oVF612HFJLJmu6da9xTYgC8fIfQW";
 
 super.onRequest(options, handler);
 

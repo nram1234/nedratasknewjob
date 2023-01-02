@@ -28,7 +28,7 @@ class Home2Model extends AbstractJsonResource{
 
   Home2Model.fromJson(Map<String, dynamic> json) {
     userName = json['user_name'];
-    greenGains = json['green_gains'];
+    greenGains = json['green_gains'] ?.toDouble();
     goldGains = json['gold_gains'];
     userSteps = json['user_steps'];
     todaySteps = json['today_steps'];

@@ -312,9 +312,9 @@ class HomeScreen extends GetView<HomeController> {
               CarouselSlider(
                 items: logic.home2model!.challenges!.map((e) {
                   return ChallengesWidgetItem(
-                    date: "${ e.createdAt} ${ e.updatedAt}",
+                    date: "${ e.createdAt}  ",
                     image: e.image!,
-                    time:"${ e.createdAt} ${ e.updatedAt}" , high: 60,);
+                    time:"${ e.updatedAt}" , high: 70,);
                 }).toList(),
                 carouselController: _controller,
                 options: CarouselOptions(
@@ -365,7 +365,7 @@ class HomeScreen extends GetView<HomeController> {
                 height: 200,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: imageSliders2.length,
+                    itemCount: logic.home2model?.trainings?.length,
                     itemBuilder: (context, pos) {
                       return Padding(
                         padding: const EdgeInsets.all(9.0),
@@ -379,7 +379,7 @@ class HomeScreen extends GetView<HomeController> {
                                 borderRadius: BorderRadius.circular(5),
                                 image: DecorationImage(
                                     image: NetworkImage(
-                                      "https://tse2.mm.bing.net/th?id=OIP.-b0mS-q3zE0JVPpA1WA2VAHaEO&pid=Api&P=0",
+                                      logic.home2model!.trainings![pos].image!,
                                     ),
                                     fit: BoxFit.fill)),
                             child: Container(
@@ -395,12 +395,12 @@ class HomeScreen extends GetView<HomeController> {
                                         mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
                                         children: [
-                                          Text("Cycling 6AM - AM",
+                                          Text("${logic.home2model!.trainings![pos].createdAt}",
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 18,
                                                   fontWeight: FontWeight.w500)),
-                                          Text("9/12/2023",
+                                          Text("${logic.home2model!.trainings![pos].startDate}",
                                               style:
                                               TextStyle(color: Colors.white))
                                         ]),
