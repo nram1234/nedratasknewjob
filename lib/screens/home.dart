@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import 'controllers/controll.dart';
 
-class HomeScreen extends GetView<HomeController> {
+class HomeScreen extends GetView<Home1Controller> {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
@@ -11,7 +11,7 @@ class HomeScreen extends GetView<HomeController> {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: GetBuilder<HomeController>(builder: (logic) {
+          child: GetBuilder<Home1Controller>(builder: (logic) {
             return RefreshIndicator(
               onRefresh: logic.pullToRefresh,
               child: ListView.builder(

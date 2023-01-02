@@ -1,4 +1,6 @@
-class Home2Model {
+import 'package:nedratasknewjob/network/abstract_json_resource.dart';
+
+class Home2Model extends AbstractJsonResource{
   String? userName;
   double? greenGains;
   int? goldGains;
@@ -181,12 +183,12 @@ class Challenges {
     address = json['address'];
     destination = json['destination'];
     image = json['image'];
-    longitude = json['longitude'];
-    latitude = json['latitude'];
-    startLatitude = json['start_latitude'];
-    startLongitude = json['start_longitude'];
-    endLatitude = json['end_latitude'];
-    endLongitude = json['end_longitude'];
+    longitude = json['longitude']?.toDouble();
+    latitude = json['latitude'] ?.toDouble();
+    startLatitude = json['start_latitude'] ?.toDouble();
+    startLongitude = json['start_longitude'] ?.toDouble();
+    endLatitude = json['end_latitude'] ?.toDouble();
+    endLongitude = json['end_longitude'] ?.toDouble();
     city = json['city'];
     status = json['status'];
     createdAt = json['created_at'];
@@ -390,12 +392,12 @@ class Trainings {
     address = json['address'];
     destination = json['destination'];
     image = json['image'];
-    longitude = json['longitude'];
-    latitude = json['latitude'];
-    startLatitude = json['start_latitude'];
-    startLongitude = json['start_longitude'];
-    endLatitude = json['end_latitude'];
-    endLongitude = json['end_longitude'];
+    longitude = json['longitude']?.toDouble();
+    latitude = json['latitude']?.toDouble();
+    startLatitude = json['start_latitude']?.toDouble();
+    startLongitude = json['start_longitude']?.toDouble();
+    endLatitude = json['end_latitude']?.toDouble();
+    endLongitude = json['end_longitude']?.toDouble();
     city = json['city'];
     posted = json['posted'];
     status = json['status'];

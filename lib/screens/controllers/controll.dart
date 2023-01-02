@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../network/data_api.dart';
 import '../../network/model/my_data_model.dart';
 
-class HomeController extends GetxController
+class Home1Controller extends GetxController
 {
   ScrollController scrollController = ScrollController();
   DataAPI dataAPI=DataAPI();
