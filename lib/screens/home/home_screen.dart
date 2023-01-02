@@ -136,11 +136,11 @@ class HomeScreen extends GetView<HomeController> {
                   ),
                 ),
               ),
-              SizedBox(
+           logic.categoriesModel==null?CircularProgressIndicator():   SizedBox(
                 height: 99,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 10,
+                    itemCount: logic.categoriesModel?.data?.length,
                     itemBuilder: (context, pos) {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -169,7 +169,7 @@ class HomeScreen extends GetView<HomeController> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("linkia it Qa",
+                                Text("${logic.categoriesModel?.data?}",
                                     style: TextStyle(color: Colors.yellow)),
                                 SizedBox(
                                   height: 4,
