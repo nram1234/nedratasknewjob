@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:nedratasknewjob/screens/binding/home_binding.dart';
+import 'package:nedratasknewjob/screens/home/binding/home_binding.dart';
+
 import 'package:nedratasknewjob/screens/home/home_screen.dart';
- 
-import 'screens/bltscreen.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,15 +33,15 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
- home:   HomeScreen(),
-     // initialRoute: "/",
-     //  getPages: [
-     //    GetPage(
-     //      name: "/",
-     //      page: () => HomeScreen(),
-     //      binding: HomeBinding(),
-     //    ),
-     //  ],
+ //home:   HomeScreen(),
+     initialRoute: "/",
+      getPages: [
+        GetPage(
+          name: "/",
+          page: () => HomeScreen(),
+          binding: HomeBinding(),
+        ),
+      ],
     );
   }
 }

@@ -1,8 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:nedratasknewjob/screens/home/controller_home_screen/home_controller.dart';
 import 'package:nedratasknewjob/screens/home/widgets/challenges_widget_item.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends GetView<HomeController> {
   HomeScreen({Key? key}) : super(key: key);
   final CarouselController _controller = CarouselController();
   List<Widget> imageSliders = [
