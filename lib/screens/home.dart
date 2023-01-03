@@ -40,7 +40,27 @@ class HomeScreen extends GetView<Home1Controller> {
             );
           }),
         ),
-      ),
+        bottomNavigationBar: Directionality(
+          textDirection: TextDirection.rtl,
+          child: BottomNavigationBar(
+            onTap: (v){},
+
+            showUnselectedLabels: true,showSelectedLabels: true,
+
+            items: [
+              BottomNavigationBarItem(
+                icon:Icon(Icons.home),
+                label: "الرئيسية", ),
+              BottomNavigationBarItem(
+                    icon:Icon(Icons.add),
+                  label: "التقارير"),
+              BottomNavigationBarItem(
+                  icon:Icon(Icons.ac_unit_sharp),
+                  label: "الطلبات"),
+
+            ],
+          ),
+        ),  ),
     );
   }
 }
